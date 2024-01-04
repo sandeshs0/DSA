@@ -158,6 +158,21 @@ public class BSFShortest {
         System.out.print(destination + " ");
     }
 
+    int Bellmonford(int graph[][], int s, int d, int v){
+        int dist[]=new int[v];
+        for(int i=0; i<v; i++){
+            d[i]=Integer.MAX_VALUE;
+        }
+            dist[s]=0;
+            for(int i=1; i<v; i++){
+                for(int j=0; j<v; j++){
+                    int u=graph[j][0];
+                    int u_v= graph[j][1];
+                    int w= graph[j][2];
+                }
+            }
+        }
+    }
     public static void main(String[] args) {
         BSFShortest adj = new BSFShortest(5);
 
