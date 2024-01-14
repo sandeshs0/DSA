@@ -158,7 +158,7 @@ public class BSFShortest {
         System.out.print(destination + " ");
     }
 
-    int Bellmonford(int graph[][], int s, int d, int v){
+    int Bellmonford(int graph[][], int s, int d[], int v){
         int dist[]=new int[v];
         for(int i=0; i<v; i++){
             d[i]=Integer.MAX_VALUE;
@@ -172,7 +172,18 @@ public class BSFShortest {
                 }
             }
         }
+
+
+    void flayod_warshall(int d[][]){
+        for(int k=0; k<d.length; k++){
+            for(int i=0; i<d.length; i++){
+                for(int j=0; j<d.length; j++){
+                    d[i][j] = Math.min(d[i][j], d[i][k]+d[k][j]);
+                }
+            }
+        }
     }
+    
     public static void main(String[] args) {
         BSFShortest adj = new BSFShortest(5);
 

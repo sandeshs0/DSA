@@ -1,0 +1,74 @@
+Traversal Methods
+
+
+--> Preorder
+--> InOrder
+--> PostOrder
+### 1. Preorder traversal:
+
+- A preorder traversal visits the root node first, then recursively visiting the left
+subtree and finally the right subtree. It is also known as "root - left - right
+traversal". The function `pre_order(node)` takes a binary tree's root
+as input parameter and returns an array containing elements of the binary tree in
+the order they were visited by a preorder traversal method.
+
+
+
+
+###PostOder Traversal:
+
+The postorder traversal visits the nodes of a binary tree in the following way: First it
+visits the left child, then the right child and finally the root node. So for any given
+binary tree, if we print the values returned by calling `post_order(root)`, it will
+always be equal to printing the values of all nodes of the tree in reverse order.
+Hence, `post_order(root) = [right,left,root]`, where
+`[right,left]` are results of `post_order(left)` and `post_
+order(right)`. Here is the implementation of the `post_order()` function which 
+returns an array containing elements of the binary tree in the order they were
+visited by a postorder traversal method.
+
+D,B,E,F,C,A
+
+
+
+//Binary Tree with Array Representation
+
+--> 
+insertleftchild(char Parent, char Child, a[]){
+    if(parent==null){
+        a[0]=child;
+    }
+    int Pindex=FindIndex(P);
+    if(Pindex==-1){
+      return;
+    }
+    a[2*Pindex+1]=Child;
+}
+
+int FindIndex(Char data, a[]){
+    for(int i=0; i<a.length; i++){
+        if(data=a[i]){
+            return i;
+        }
+        return -1;
+    }
+}
+
+findParents(a[], C){
+    Cindex= FindIndex(C);
+    return a[(Cindex-1)/2];
+}
+
+
+//Binay Search Tree
+  =-> Recursion
+  =-> Interation
+  =-> Deleting a node from the BST
+
+
+
+--| AVL Tree |--
+
+      0
+   0     0
+ 
