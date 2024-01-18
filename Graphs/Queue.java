@@ -1,5 +1,4 @@
-
-
+package Graphs;
 public class Queue {
     int queue[];
     int front=-1;

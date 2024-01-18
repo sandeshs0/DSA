@@ -3,12 +3,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class AdjMatrix {
+public class AdjMatrixMST {
+
+    public static class  Edge implements Comparable<Edge>{
+        int s;
+        int d;
+        int w;
+        Edge(int s, int d, int w){
+            this.s=s;
+            this.d=d;
+            this.w=w;
+        }
+        @Override
+        public int compareTo(Edge o) {
+            return this.w-o.w;
+        }
+    }
+
+    
     int graph[][];
     int v;
-    AdjMatrix(int v){
+    Edge edges[];
+
+    AdjMatrixMST(int v){
         this.v=v;
         graph= new int[v][v];
+        edges= new Edge[v*(v-1)/2];
     }
 
     void addEdge(int source, int destination){ // if it was a weighted graph, we would take a w parameter and set that in place of 1.
